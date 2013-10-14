@@ -1,0 +1,33 @@
+TODO
+	[x] get logo
+	[ ] get sloggan with Mike
+		Pio proposal: "spots you'll love"
+			goal:
+				getaways you will love
+				vacations you will love
+				Places you will love
+	[ ] get favicon
+	[ ] what's is citypamph on a nutsheel
+	[ ] check this http://www.yelp.com/developers/documentation/examples
+	[ ] search api http://www.yelp.com/developers/documentation/v2/search_api
+
+	[ ] categories filter:
+		http://www.yelp.com/developers/documentation/category_list
+
+		Arts & Entertainment
+
+		Food
+
+		Nightlife
+
+		Landmarks & Historical Buildings
+
+		Restaurants
+
+		Shopping 
+
+
+worked hours:
+	prototype and mockups: 5
+	interview with designer: 1
+	actual proto coding: 2.5 sunday 10/06/2013

@@ -1,0 +1,57 @@
+body {
+  	background: #f8f9fa;
+}
+
+.search-container {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.citypamph-results-box {	
+	padding: 0 15px 10px;
+}
+
+.citypamph-custom-header {
+	background: #fff;
+}
+
+.citypamph-item-img {
+	padding: 1px;
+	border: 1px solid rgba(0, 0, 0, .15);
+	vertical-align: top;
+}
+
+.citypamph-address {
+	margin: 0;
+}
+
+.meta-container {
+	display: inline-block;
+}
+
+.citypamph-logo {
+    margin-top: 20%;
+    margin-left: -82px;
+}
+
+.citypamph-result-item {
+    border-left: 5px solid #f8f9fa;
+    border-bottom: 5px solid #f8f9fa;
+    background: #fff;
+}
+
+.citypamph-result-item__header {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.load-more {
+    width: 100%;
+}
+
+/*[TODO] remove the following style, is for prototyping porpouses*/
+.HARDCODED-snippet-overflow {
+    height: 71px;
+}

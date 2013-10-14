@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta name="description" content="city pamphlets">
+        <meta name="author" content="rob.alarcon">
+        
+        <title>Citypamph</title>        
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/plugins/bootstrap/bootstrap.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="css/citypamph.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="js/html5shiv/html5shiv.js"></script>
+            <script src="js/respond/respond.min.js"></script>
+        <![endif]-->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-44829883-1', 'citypamph.com');
+          ga('send', 'pageview');
+
+        </script>
+    </head>
+
+    <body >
+        <!-- header -->
+        <div class="navbar navbar-default navbar-static-top citypamph-custom-header" data-bind="visible: businesses().length > 0">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#"><img src="img/index/citypamph-logo-small.png" class="citypamph-logo-small" id="js-brand-logo" /> </a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Print</a></li>
+                <li><a href="#">Share</a></li>    
+                <li><a href="#">About</a></li>                
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </div>
+
+        <div class="container">
+
+            <!-- Count:
+            <span data-bind="text: businesses().length"></span> -->
+            
+            <div id="js-search-container" data-bind="visible: !businesses().length">
+
+                <!-- First Band logo -->
+                <div class="text-center">
+                    <img src="img/index/citypamph-logo.png" class="citypamph-logo" />
+                </div> <!-- .text-center -->
+
+                <div class="row">
+                    <div class="col-md-11">
+                        <div class="input-group search-container">
+                            <input type="text" class="form-control" id="js-txt-location" placeholder="Just type the name of the City you are visiting!" autofocus>
+                            <span class="input-group-btn">
+                                <button id="js-btn-search" class="btn btn-primary" type="button">Go!</button>
+                            </span>
+                        </div><!-- /input-group -->
+                    </div><!-- /.col-lg-6 -->
+                </div><!-- /.row -->
+            </div> <!-- #js-search-container -->
+
+            <div id="js-results-container" data-bind="visible: businesses().length > 0" class="citypamph-results-box">
+                <div class="row" data-bind="template: { name: 'tmpl-citypamph-item', foreach: businesses }">
+                </div>
+                <!-- load more items for the selected category -->
+                <button type="button" class="btn btn-primary load-more"  data-loading-text="Loading..." id="js-load-more-hardcoded">Load More</button>
+
+        </div><!-- /.container -->
+
+        <!-- Templates
+        ================================================= -->
+        <script id="tmpl-citypamph-item" type="text/html">
+            <div class="col-6 col-sm-6 col-lg-4 citypamph-result-item">
+                <h2 data-bind="text: name, attr: {'title': name}" class="citypamph-result-item__header"></h2>
+                <img data-bind="attr: {'src': image_url}" class="citypamph-item-img" />
+                <div class="meta-container">
+                    <img data-bind="attr: {'src': rating_img_url}" >
+                    <address class="citypamph-address">
+                        <span data-bind="text: location.address"></span><br><span data-bind="text: location.city"></span>, <span data-bind="text: location.state_code"></span> <span data-bind="text: location.postal_code"></span>
+                    </address>
+                    <span data-bind="text: display_phone" class="biz-phone"></span> 
+
+                    <span data-bind="text: review_count" class="reviews"></span> <span> reviews</span>               
+                </div> <!--.meta-container-->
+                <b>What fans say:</b>
+                <p class="HARDCODED-snippet-overflow" data-bind="text: snippet_text">
+                </p>
+
+                
+                <p><a class="btn btn-default" target="_BLANK" data-bind="attr: { 'href': mobile_url}">View in Yelp »</a></p>
+            </div><!--/main div element container-->
+        </script>
+
+        <!-- Core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/javascript" src="js/plugins/jquery/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/plugins/ko/ko.js"></script>
+        <script type="text/javascript" src="js/plugins/ko/ko.mapping.js"></script>
+        <script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/oauth.js"></script>
+        <script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/sha1.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>
